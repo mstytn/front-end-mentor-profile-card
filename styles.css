@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --color-primary-cyan: hsl(185, 75%, 39%);
+  --color-primary-blue: hsl(227, 10%, 46%);
+  --color-primary-blue-desaturated: hsl(229, 23%, 23%);
+  --color-neutral: hsl(0, 0%, 59%);
+
+  --bp-mobile: 375px;
+  --bp-desktop: 1440px;
+}
+
+html {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-primary-cyan);
+  overflow: clip;
+}
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-top {
+  position: absolute;
+  top: -500px;
+  left: -290px;
+  background: url('./images/bg-pattern-top.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.bg-bottom {
+  position: absolute;
+  bottom: -630px;
+  right: -240px;
+  background: url('./images/bg-pattern-bottom.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  text-align: center;
+}
+
+.card {
+  width: 350px;
+  height: 374px;
+  background-color:white;
+  border-radius: .8rem;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  background-image: url('./images/bg-pattern-card.svg');
+  background-repeat: no-repeat;
+}
+
+.card p:nth-child(2) {
+  margin-top: 1.1rem;
+  font-weight: 700;
+}
+.card p:nth-child(2) span {
+  font-weight: 400;
+  color: var(--color-neutral);
+}
+
+.card p:nth-child(3) {
+  margin-top: .4rem;
+  margin-bottom: 1.3rem;
+  font-size: .8rem;
+  color: var(--color-neutral);
+}
+
+
+.card-profile-image {
+  flex: 0 0 auto;
+  align-self: center;
+  border-radius: 10rem;
+  margin-top: 25%;
+  border: 5px solid white;
+}
+
+.profile-counters {
+  border-top: 0.1px solid hsla(0, 0%, 59%, .3);
+  display: flex;
+  padding: 1.3rem 2.2rem;
+  justify-content: space-around;
+  
+}
+
+.counters-count {
+  font-weight: 700;
+  color: var(--color-primary-blue-desaturated);
+  margin-bottom: .3rem;
+}
+
+.counters-title {
+  font-size: .55rem;
+  letter-spacing: 2px;
+  color: var(--color-primary-blue-desaturated);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+  }
+  .bg-top {
+    top: -580px;
+    left: -740px;
+  }
+  
+  .bg-bottom {
+    bottom: -580px;
+    right: -740px;
+  }
+
+}
